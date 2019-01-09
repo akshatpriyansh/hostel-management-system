@@ -1,0 +1,20 @@
+<h1> Details for <%= @hosteller.hosteller_name %></h1>
+
+<div>
+  <ul>
+    <li>Name: <%= @hosteller.hosteller_name %></li>
+    <li>Phone: <%= @hosteller.hosteller_number %></li>
+    <li>Address: <%= @hosteller.hosteller_address %></li>
+    <li>Father's Name: <%= @hosteller.father_name %></li>
+    <li>Father's Number: <%= @hosteller.father_number %></li>
+    <li>Father's Occupation: <%= @hosteller.father_occupation %></li>
+    <li>Mother's Name: <%= @hosteller.mother_name %></li>
+    <li>Mother's Number: <%= @hosteller.mother_number %></li>
+    <li>Building: <%= get_building_name(@hosteller.building_id) %></li>
+    <li>Room: <%= @hosteller.room_number %></li>
+    <li>Block: <%= @hosteller.block %></li>
+    <li>Form: <%= link_to 'Click to View', @hosteller.form.url %></li>
+    <li><%= link_to 'Edit', controller: "hosteller", action: "edit", id: @hosteller.id %></li>
+
+  </ul>
+</div>

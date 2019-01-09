@@ -5,7 +5,10 @@
   <div>
     <ul>
     <% @hosteller_data.keys.each do |hosteller_id| %>
-    <li><%="#{@hosteller_data[hosteller_id][:hosteller_name]}, #{@hosteller_data[hosteller_id][:building_id]}"%></li>
+    <li>
+      <%= link_to @hosteller_data[hosteller_id][:hosteller_name],
+         controller: "hosteller", action: "show", id: hosteller_id %>
+    </li>
     <% end %>
     </ul>
   </div>

@@ -18,3 +18,4 @@ $(document).ready ->
     resultXHR.success (data) ->
       console.log('successful')
       $('#hosteller-data').html data
+

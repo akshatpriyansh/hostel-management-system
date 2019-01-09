@@ -7,11 +7,33 @@ class HostellerController < ApplicationController
     @hosteller = Hosteller.new
   end
 
+  def edit
+    hosteller_id = params[:id]
+    @hosteller = Hosteller.find(hosteller_id)
+
+    render :'hosteller/new'
+  end
+
   def create
     hosteler = Hosteller.new(hosteller_params)
     hosteler.save!
     flash[:error] = 'Job Posting is added successfully.'
     redirect_to hostellers_path
+  end
+
+  def update
+    hosteller_id = params[:hosteller_id]
+
+    hosteller_object = Hosteller.find(hosteller_id)
+    hosteller_object.assign_attributes(hosteller_params)
+    if hosteller_object.save
+      redirect_to hostellers_path
+      flash[:success] = "Worked"
+    end
+  end
+  def show
+    hosteller_id = params[:id]
+    @hosteller = Hosteller.find(hosteller_id)
   end
 
   def get_all_hostellers
