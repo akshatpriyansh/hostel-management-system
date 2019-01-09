@@ -1,56 +1,9 @@
-<%= form_tag hosteller_create_path do %>
-  <div>
-    <div>
-      <%= label_tag :hosteller_name, 'Hosteller Name:', class: 'form-control' %>
-    </div>
-    <div class="col-sm-6">
-      <%= text_field_tag :hosteller_name ,'', class: 'form-control' %>
-    </div>
-  </div>
+<input type="text" id="users"/>
+<input type="button" id="search-btn" value="Search"/>
+<ul>
+  <li><%= button_to 'Add New', create_hosteller_path, :method => :get %></li>
+</ul>
 
-  <div>
-    <div>
-      <%= label_tag :hosteller_number, 'Hosteller Number:', class: 'form-control' %>
-    </div>
-    <div class="col-sm-6">
-      <%= text_field_tag :hosteller_number ,'', class: 'form-control' %>
-    </div>
-  </div>
+<div id="hosteller-data">
 
-  <div>
-    <div>
-      <%= label_tag :hosteller_address, 'Hosteller Address:', class: 'form-control' %>
-    </div>
-    <div class="col-sm-6">
-      <%= text_field_tag :hosteller_address ,'', class: 'form-control' %>
-    </div>
-  </div>
-
-  <div>
-    <div>
-      <%= label_tag :father_name, 'Hosteller Father Name:', class: 'form-control' %>
-    </div>
-    <div class="col-sm-6">
-      <%= text_field_tag :father_name ,'', class: 'form-control' %>
-    </div>
-  </div>
-
-  <div>
-    <div>
-      <%= label_tag :father_occupation, 'Hosteller Father Occupation:', class: 'form-control' %>
-    </div>
-    <div class="col-sm-6">
-      <%= text_field_tag :father_occupation ,'', class: 'form-control' %>
-    </div>
-  </div>
-
-  <div>
-    <div>
-      <%= label_tag :father_number, 'Hosteller Father Number:', class: 'form-control' %>
-    </div>
-    <div class="col-sm-6">
-      <%= text_field_tag :father_number ,'', class: 'form-control' %>
-    </div>
-  </div>
-  <%= submit_tag 'Submit' %>
-<% end %>
+</div>

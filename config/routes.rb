@@ -4,8 +4,11 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'admin#index'
-  get 'hostellers', to: 'hosteller#index', as: 'hosteller'
-  post 'hosteller/create', to: 'hosteller#create'
+  get 'hostellers', to: 'hosteller#index', as: 'hostellers'
+  get 'hostellers/create', to: 'hosteller#new', as: 'create_hosteller'
+  get 'hosteller/search', to: 'hosteller#get_all_hostellers', as: 'search_hostellers'
+  get 'hosteller/get_all_hostellers', to: 'hosteller#get_all_hostellers'
+  post 'hostellers/create', to: 'hosteller#create'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

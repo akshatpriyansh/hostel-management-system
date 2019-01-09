@@ -1,0 +1,114 @@
+<%= form_for(@hosteller, url: hostellers_create_path ,html: {class: 'form-horizontal'}) do |f| %>
+  <div>
+    <h1 style="text-align: center;">New Hosteller Application form</h1>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-3">
+      <%= f.label :hosteller_name, 'Hosteller Name' %>
+    </div>
+      <div class='col-sm-5'>
+        <%= f.text_field :hosteller_name, class: 'form-control' %>
+      </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-3">
+      <%= f.label :hosteller_number, 'Hosteller Number' %>
+    </div>
+      <div class='col-sm-5'>
+        <%= f.text_field :hosteller_number, class: 'form-control' %>
+      </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-3">
+      <%= f.label :hosteller_address, 'Hosteller Address' %>
+    </div>
+      <div class='col-sm-5'>
+        <%= f.text_field :hosteller_address, class: 'form-control' %>
+      </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-3">
+      <%= f.label :father_name, "Father's Name" %>
+    </div>
+      <div class='col-sm-5'>
+        <%= f.text_field :father_name, class: 'form-control' %>
+      </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-3">
+      <%= f.label :father_occupation, "Father's Occupation" %>
+    </div>
+      <div class='col-sm-5'>
+        <%= f.text_field :father_occupation, class: 'form-control' %>
+      </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-3">
+      <%= f.label :father_number, "Father's Number" %>
+    </div>
+      <div class='col-sm-5'>
+        <%= f.text_field :father_number, class: 'form-control' %>
+      </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-3">
+      <%= f.label :mother_name, "Mother's Name" %>
+    </div>
+      <div class='col-sm-5'>
+        <%= f.text_field :mother_name, class: 'form-control' %>
+      </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-3">
+      <%= f.label :mother_number, "Mother's Name" %>
+    </div>
+      <div class='col-sm-5'>
+        <%= f.text_field :mother_number, class: 'form-control' %>
+      </div>
+  </div>
+
+    <div class="form-group">
+      <div class="col-sm-3">
+        <%= f.label :room_number, "Room Number" %>
+      </div>
+        <div class='col-sm-5'>
+          <%= f.text_field :room_number, class: 'form-control' %>
+        </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-3">
+        <%= f.label :building_id, "Building" %>
+      </div>
+        <div class='col-sm-5'>
+          <%= f.text_field :building_id, class: 'form-control' %>
+        </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-3">
+        <%= f.label :block, "Block" %>
+      </div>
+        <div class='col-sm-5'>
+          <%= f.text_field :block, class: 'form-control' %>
+        </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-3">
+        <%= f.label :form, "Upload Form" %>
+      </div>
+        <div class='col-sm-5'>
+          <%= f.file_field :form, class: 'form-control' %>
+        </div>
+    </div>
+
+    <%= f.submit 'Submit', class: 'btn btn-primary', id: 'add-new-btn', data: { 'confirm': 'Please verify is all details are correct' } %>
+  <% end %>

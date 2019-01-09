@@ -1,1 +1,5 @@
-<%= link_to 'Hostellers', hosteller_path %>
+<% if flash[:error] %>
+  <p><%= flash[:error] %></p>
+<% end %>
+
+<%= link_to 'Hostellers', hostellers_path %>

@@ -1,0 +1,13 @@
+<div>
+  <% if @hosteller_data.empty? %>
+    <h3 style="text-align:center">No Hostellers exist by this name.</h3><br>
+  <% else %>
+  <div>
+    <ul>
+    <% @hosteller_data.keys.each do |hosteller_id| %>
+    <li><%="#{@hosteller_data[hosteller_id][:hosteller_name]}, #{@hosteller_data[hosteller_id][:building_id]}"%></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+</div>

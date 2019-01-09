@@ -1,0 +1,7 @@
+<% flash.each do |type, message| %>
+  <div class="margin-top alert <%= bootstrap_class_for(type) %> fade in <% if @show_after_header %> margin-top-65px <% end %>">
+    <button class="close" data-dismiss="alert">×</button>
+    <span class="<%= glyphicon_class_for(type) %> "></span>
+    <%= message %>
+  </div>
+<% end %>
