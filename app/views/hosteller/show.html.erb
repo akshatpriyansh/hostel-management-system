@@ -15,6 +15,6 @@
     <li>Block: <%= @hosteller.block %></li>
     <li>Form: <%= link_to 'Click to View', @hosteller.form.url %></li>
     <li><%= link_to 'Edit', controller: "hosteller", action: "edit", id: @hosteller.id %></li>
-
+    <li><%= button_to 'Make Payment Entry', create_payment_path, :method => :post %></li>
   </ul>
 </div>

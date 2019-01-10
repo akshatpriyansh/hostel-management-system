@@ -5,7 +5,7 @@
 $(document).ready ->
   $('#search-btn').click ->
     search_query = $('#users').val()
-
+    console.log('inside')
     options =
       method: 'GET'
       url: '/hosteller/get_all_hostellers'
@@ -14,6 +14,7 @@ $(document).ready ->
         hosteller_name: search_query
 
     resultXHR = $.ajax options
+    console.log('fired')
 
     resultXHR.success (data) ->
       console.log('successful')

@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   patch 'hosteller/:id/update', to: 'hosteller#update'
   resources :hosteller
 
+  post 'payment/create', to: 'payment#create', as: 'create_payment'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

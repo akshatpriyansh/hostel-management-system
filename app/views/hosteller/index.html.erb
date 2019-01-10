@@ -1,5 +1,11 @@
-<input type="text" id="users"/>
-<input type="button" id="search-btn" value="Search"/>
+<div id="current-month" style="text-align: center;">
+  <%= Date.current.strftime("%B") %>
+</div>
+
+<div>
+  <input type="text" id="users"/>
+  <input type="button" id="search-btn" value="Search"/>
+</div>
 <ul>
   <li><%= button_to 'Add New', new_hosteller_path, :method => :get %></li>
 </ul>
