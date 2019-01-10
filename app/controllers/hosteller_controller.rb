@@ -38,13 +38,17 @@ class HostellerController < ApplicationController
 
   def get_all_hostellers
     hosteler_name = params[:hosteller_name]
-    hosteler_object = Hosteller.where(hosteller_name: hosteler_name)
+    hosteler_object = Hosteller.where('hosteller_name LIKE ?', "%#{hosteler_name}%")
 
     if hosteler_object.present?
       @hosteller_data = {}
       get_hostellers_by_name(hosteler_object, @hosteller_data)
       respond_to do |format|
         format.html { render :'hosteller/_get_all_hosteller', layout: false }
+      end
+    else
+      respond_to do |format|
+        format.html { render :'hosteller/_no_hostellers_found', layout: false }
       end
     end
   end

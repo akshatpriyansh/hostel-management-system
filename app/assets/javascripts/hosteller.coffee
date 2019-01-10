@@ -18,4 +18,7 @@ $(document).ready ->
     resultXHR.success (data) ->
       console.log('successful')
       $('#hosteller-data').html data
-
+    resultXHR.error (data) ->
+      alert data.responseText
+      console.log(data)
+      return
