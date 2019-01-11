@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
 
   def logout
     session[:user_id] = nil
-    redirect_to :action => 'login'
+    redirect_to :root
   end
 
   def login_attempt
