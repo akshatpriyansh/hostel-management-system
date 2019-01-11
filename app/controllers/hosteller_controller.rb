@@ -67,7 +67,7 @@ class HostellerController < ApplicationController
   def hosteller_params
     params.require(:hosteller).permit(:hosteller_name, :hosteller_number, :hosteller_address,
                                       :father_name, :father_number, :father_occupation, :mother_name,
-                                      :mother_number, :block, :building_id, :room_number, :form
+                                      :mother_number, :block, :building_id, :room_number, :form, :fees
     )
   end
 

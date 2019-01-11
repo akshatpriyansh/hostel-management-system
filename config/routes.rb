@@ -1,9 +1,27 @@
 Rails.application.routes.draw do
+  get 'sessions/login'
+
+  get 'sessions/home'
+
+  get 'sessions/profile'
+
+  get 'sessions/setting'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'admin#index'
+
+  root :to => "sessions#login"
+  match "signup", :to => "users#new", :via => [:get]
+  match "login", :to => "sessions#login", :via => [:get]
+  match "logout", :to => "sessions#logout", :via => [:get]
+  match "home", :to => "sessions#home", :via => [:get]
+  match "profile", :to => "sessions#profile", :via => [:get]
+  match "setting", :to => "sessions#setting", :via => [:get]
+  post 'sessions/login_attempt', to: 'sessions#login_attempt'
+  post 'users/create', to: 'users#create'
+  get 'admin', to: 'admin#index', as: 'admin'
   get 'hostellers', to: 'hosteller#index', as: 'hostellers'
   get 'hostellers/new', to: 'hosteller#new', as: 'new_hosteller'
   get 'hostellers/search', to: 'hosteller#get_all_hostellers', as: 'search_hostellers'

@@ -25,10 +25,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'sqlite3-ruby'
 gem "paperclip"
 gem 'pg', '~> 0.19.0'
+gem 'bootstrap-sass', '3.3.7'
+
 gem 'bootstrap', '~> 4.2.1'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
+gem 'bcrypt', '~> 3.1.7'
+gem 'twitter-bootstrap-rails'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
