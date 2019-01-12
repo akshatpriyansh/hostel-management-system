@@ -1,0 +1,38 @@
+
+<%= form_for(@building, url: building_create_path , html: {class: 'form-horizontal'}, id: @building.id) do |f| %>
+  <div>
+    <h1 style="text-align: center;">Add a new Building</h1>
+  </div>
+
+  <input type="hidden" name= "building_id" id="building_id" value="<%= @building.id %>">
+
+  <div class="form-group">
+    <div class="col-sm-3">
+      <%= f.label :name, 'Building Name' %>
+    </div>
+    <div class='col-sm-5'>
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-3">
+      <%= f.label :location, 'Fees' %>
+    </div>
+    <div class='col-sm-5'>
+      <%= f.text_field :location, class: 'form-control' %>
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <div class="col-sm-3">
+      <%= f.label :max_strength, 'Strength' %>
+    </div>
+    <div class='col-sm-5'>
+      <%= f.text_field :max_strength, class: 'form-control' %>
+    </div>
+  </div>
+
+  <%= f.submit 'Submit', class: 'btn btn-primary', id: 'add-new-btn', data: { 'confirm': 'Please verify is all details are correct' } %>
+<% end %>

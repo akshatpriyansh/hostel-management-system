@@ -20,7 +20,9 @@ Rails.application.routes.draw do
   match "profile", :to => "sessions#profile", :via => [:get]
   match "setting", :to => "sessions#setting", :via => [:get]
 
+  get 'buildings/new', to: 'buildings#new'
   get 'buildings/index', to: 'buildings#index', as: 'buildings'
+  post 'buildings/create', to: 'buildings#create', as: 'building_create'
   post 'sessions/login_attempt', to: 'sessions#login_attempt'
   post 'users/create', to: 'users#create'
   get 'admin', to: 'admin#index', as: 'admin'
