@@ -16,9 +16,11 @@ Rails.application.routes.draw do
   match "signup", :to => "users#new", :via => [:get]
   match "login", :to => "sessions#login", as: 'login', :via => [:get]
   match "logout", :to => "sessions#logout", :via => [:get]
-  match "home", :to => "sessions#home", :via => [:get]
+  match "home", :to => "admin#index", :via => [:get]
   match "profile", :to => "sessions#profile", :via => [:get]
   match "setting", :to => "sessions#setting", :via => [:get]
+
+  get 'buildings/index', to: 'buildings#index', as: 'buildings'
   post 'sessions/login_attempt', to: 'sessions#login_attempt'
   post 'users/create', to: 'users#create'
   get 'admin', to: 'admin#index', as: 'admin'
