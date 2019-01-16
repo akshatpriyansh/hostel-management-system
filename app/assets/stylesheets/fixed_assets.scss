@@ -1,3 +1,74 @@
+.navbar-custom {
+  margin: -1px;
+  border-radius: 0px;
+  background-color: #8c54a1;
+  border-color: #fdfdfd;
+}
+.navbar-custom .navbar-brand {
+  color: #ffffff;
+}
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus {
+  color: #8c54a1;
+}
+.navbar-custom .navbar-text {
+  color: #ffffff;
+}
+.navbar-custom .navbar-nav > li > a {
+  color: #ffffff;
+}
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus {
+  color: #8c54a1;
+}
+.navbar-custom .navbar-nav > .active > a,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus {
+  color: #8c54a1;
+  background-color: #fdfdfd;
+}
+.navbar-custom .navbar-nav > .open > a,
+.navbar-custom .navbar-nav > .open > a:hover,
+.navbar-custom .navbar-nav > .open > a:focus {
+  color: #8c54a1;
+  background-color: #fdfdfd;
+}
+.navbar-custom .navbar-toggle {
+  border-color: #fdfdfd;
+}
+.navbar-custom .navbar-toggle:hover,
+.navbar-custom .navbar-toggle:focus {
+  background-color: #fdfdfd;
+}
+.navbar-custom .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.navbar-custom .navbar-collapse,
+.navbar-custom .navbar-form {
+  border-color: #ffffff;
+}
+.navbar-custom .navbar-link {
+  color: #ffffff;
+}
+.navbar-custom .navbar-link:hover {
+  color: #8c54a1;
+}
+
+@media (max-width: 767px) {
+  .navbar-custom .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffffff;
+  }
+  .navbar-custom .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-custom .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #8c54a1;
+  }
+  .navbar-custom .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-custom .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-custom .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #8c54a1;
+    background-color: #fdfdfd;
+  }
+}
 
 .footer {
   position: fixed;
@@ -15,7 +86,7 @@
 }
 
 .btn-custom,.btn-custom:hover,.btn-custom:focus{
-  background-color: #196ae5;
+  background-color: #8c54a1;
   color:#ffffff !important;
   font-size:14px;
   border-radius: 26px;
@@ -24,4 +95,8 @@
   //text-transform:uppercase;
   outline:0;
   font-weight:400 !important;
+}
+
+.inline-display{
+  display: inline !important;
 }
