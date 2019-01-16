@@ -1,12 +1,15 @@
 <% @page_title = "UserAuth | Signup" %>
-<div class="Sign_Form">
-  <h1>Sign Up</h1>
+<div class="col-md-4">
+
+</div>
+<div class="sign-up col-md-4" style="text-align: center;">
+  <h1 style="margin-bottom: 50px;">Sign Up</h1>
   <%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
-    <p> Username:</br> <%= f.text_field :user_name%> </p>
-    <p> Email:</br> <%= f.text_field :email%> </p>
-    <p> Password:</br> <%= f.password_field :password%></p>
-    <p> Password Confirmation:</br> <%= f.password_field :password_confirmation%> </p>
-    <%= f.submit :Signup %>
+    <p> Username</br> <%= f.text_field :user_name, class: 'form-control'%> </p>
+    <p> Email</br> <%= f.text_field :email, class: 'form-control'%> </p>
+    <p> Password</br> <%= f.password_field :password, class: 'form-control'%></p>
+    <p> Password Confirmation</br> <%= f.password_field :password_confirmation, class: 'form-control'%> </p>
+    <%= f.submit :signup, class: 'btn btn-custom' %>
   <% end %>
   <% if @user.errors.any? %>
     <ul class="Signup_Errors">
@@ -15,4 +18,8 @@
       <% end %>
     </ul>
   <% end %>
+</div>
+
+<div class="col-md-4">
+
 </div>

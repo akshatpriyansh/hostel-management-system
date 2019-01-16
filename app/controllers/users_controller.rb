@@ -11,16 +11,25 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:notice] = "You signed up successfully"
+      flash[:success] = "You signed up successfully. Login to continue."
+      redirect_sucess
+
     else
-      flash[:notice] = "Form is invalid"
+      flash[:error] = "Invalid Form Data! Please fill the form correctly."
+      redirect_failure
     end
 
-    redirect_to admin_path
   end
 
   def user_params
     params.require(:user).permit(:user_name, :email, :password, :password_confirmation)
   end
 
+  def redirect_sucess
+    redirect_to admin_path
+  end
+
+  def redirect_failure
+    redirect_to signup_path
+  end
 end
