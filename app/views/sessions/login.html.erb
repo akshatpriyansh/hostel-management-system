@@ -3,8 +3,10 @@
 
 </div>
 <div class= "sign-up col-md-4">
-  <%= image_tag 'logo_transparent.png', width: '200', style: 'margin-left: 9em;'%>
-  <h1>Welcome to HostelMate!</h1>
+  <div style="text-align: center">
+    <%= image_tag 'logo_transparent.png', width: '200'%>
+  </div>
+  <h2 style="text-align: center;">Welcome!</h2>
   <h3>Login to continue to your dashboard</h3>
   <%= form_tag(:action => 'login_attempt') do %>
     <p>Username or Email:</br> <%= text_field_tag(:username_or_email, '', class: 'form-control action-btns') %></p>
