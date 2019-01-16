@@ -8,12 +8,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<% if session[:user_id].present? %>
 <%= render partial: "shared/header"%>
+  <% end %>
 <%= render partial: "shared/flash_messages", flash: flash %>
-
-<%= yield %>
+<div class="container-fluid">
+  <%= yield %>
+</div>
+  <% if session[:user_id].present? %>
 
 <%= render partial: "shared/footer"%>
-
+<% end %>
 </body>
 </html>

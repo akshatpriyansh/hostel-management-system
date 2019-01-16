@@ -1,11 +1,12 @@
 <% @page_title = "UserAuth | Login" -%>
-<div class= "Sign_Form">
-  <h1>Log in</h1>
+<div class= "sign-up">
+  <h1>Welcome to HostelMate!</h1>
+  <h3>Login to continue to your dashboard</h3>
   <%= form_tag(:action => 'login_attempt') do %>
     <p>Username or Email:</br> <%= text_field_tag(:username_or_email) %></p>
     <p>Password:</br> <%= password_field_tag :login_password %></p>
     <%= submit_tag("Log In") %>
   <% end %>
-  <%= button_to 'Signup', signup_path, :method => 'get' %><br>
+  <%= button_to 'Signup', signup_path, :method => 'get', class: 'btn btn-custom' %><br>
 
 </div>

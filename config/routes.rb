@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   match "setting", :to => "sessions#setting", :via => [:get]
 
   get 'buildings/new', to: 'buildings#new'
-  get 'buildings/index', to: 'buildings#index', as: 'buildings'
+  get 'buildings', to: 'buildings#index', as: 'buildings'
   post 'buildings/create', to: 'buildings#create', as: 'building_create'
   post 'sessions/login_attempt', to: 'sessions#login_attempt'
   post 'users/create', to: 'users#create'
