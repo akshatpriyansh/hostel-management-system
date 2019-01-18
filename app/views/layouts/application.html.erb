@@ -8,17 +8,23 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-<% if session[:user_id].present? %>
-<%= render partial: "shared/header"%>
-  <% end %>
-<%= render partial: "shared/flash_messages", flash: flash %>
-<div class="container-fluid">
-  <%= yield %>
-</div>
+<header>
   <% if session[:user_id].present? %>
-
-<%= render partial: "shared/footer"%>
-<% end %>
+    <%= render partial: "shared/header"%>
+  <% end %>
+</header>
+<body>
+<%= render partial: "shared/flash_messages", flash: flash %>
+<div class="container-fluid" style="margin-top:50px;">
+  <body>
+    <%= yield %>
+  </body>
+</div>
 </body>
+
+<footer>
+  <% if session[:user_id].present? %>
+    <%= render partial: "shared/footer"%>
+  <% end %>
+</footer>
 </html>
