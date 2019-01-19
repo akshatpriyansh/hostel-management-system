@@ -26,7 +26,7 @@ class SessionsController < ApplicationController
     if authorized_user
       session[:user_id] = authorized_user.id
       flash[:notice] = "Welcome, #{authorized_user.user_name}"
-      redirect_to admin_path logged_in: true
+      redirect_to home_path logged_in: true
     else
       flash[:notice] = "Invalid Username or Password"
       render "login"

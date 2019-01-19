@@ -26,7 +26,7 @@ class UsersController < ApplicationController
   end
 
   def redirect_sucess
-    redirect_to admin_path
+    redirect_to home_path
   end
 
   def redirect_failure

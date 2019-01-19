@@ -16,7 +16,6 @@ Rails.application.routes.draw do
   match "signup", :to => "users#new", :via => [:get]
   match "login", :to => "sessions#login", as: 'login', :via => [:get]
   match "logout", :to => "sessions#logout", :via => [:get]
-  match "home", :to => "admin#index", :via => [:get]
   match "profile", :to => "sessions#profile", :via => [:get]
   match "setting", :to => "sessions#setting", :via => [:get]
 
@@ -25,7 +24,7 @@ Rails.application.routes.draw do
   post 'buildings/create', to: 'buildings#create', as: 'building_create'
   post 'sessions/login_attempt', to: 'sessions#login_attempt'
   post 'users/create', to: 'users#create'
-  get 'admin', to: 'admin#index', as: 'admin'
+  get 'home', to: 'admin#index', as: 'home'
   get 'hostellers', to: 'hosteller#index', as: 'hostellers'
   get 'hostellers/new', to: 'hosteller#new', as: 'new_hosteller'
   get 'hostellers/search', to: 'hosteller#get_all_hostellers', as: 'search_hostellers'

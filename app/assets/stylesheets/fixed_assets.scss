@@ -101,6 +101,10 @@ html, body {
   font-weight:400 !important;
 }
 
+.navbar-custom .navbar-toggle:hover, .navbar-custom .navbar-toggle:focus {
+  background-color: #fdfdfd00;
+}
+
 .btn-custom:hover{
   background-color: #a845ce;
 
