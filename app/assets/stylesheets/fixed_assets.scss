@@ -1,3 +1,36 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+
+/**
+ * Footer Styles
+ */
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+
 .navbar-custom {
   margin: -1px;
   border-radius: 0px;
@@ -81,10 +114,6 @@ html, body {
   height: 100%;
   margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
 }
-.footer, .push {
-  height: 155px; /* .push must be the same height as .footer */
-}
-
 
 .no-margin-btm{
   margin-bottom: unset !important;

@@ -101,7 +101,7 @@
         <%= f.label :building_id, "Building" %>
       </div>
         <div class='col-sm-5'>
-          <%= f.select( :building_id, options_for_select(get_all_buildings), {:prompt => 'Select Building Name'}, {:class => "form-control"}) %>
+          <%= f.select( :building_id, options_for_select(get_all_buildings(session[:user_id])), {:prompt => 'Select Building Name'}, {:class => "form-control"}) %>
         </div>
     </div>
 

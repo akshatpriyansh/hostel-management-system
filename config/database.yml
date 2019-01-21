@@ -9,21 +9,21 @@ default: &default
   adapter: postgresql
   encoding: utf8
   host: localhost
-  database: hostel
+  database: hms
   timeout: 5000
 
 development:
   adapter: postgresql
   encoding: utf8
   host: localhost
-  database: hostel
+  database: hms
   timeout: 5000
 
 exception_database:
   adapter: postgresql
   encoding: utf8
   host: localhost
-  database: hostel
+  database: hms
   timeout: 5000
 
 # Warning: The database defined as "test" will be erased and
@@ -31,8 +31,11 @@ exception_database:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: hostel
+  database: hms
 
 production:
   <<: *default
-  database: hostel
+  database: hms
+
+
+

@@ -16,8 +16,10 @@ class BuildingsController < ApplicationController
 
   def create
     building = Building.new(building_params)
+    building.user_id = session[:user_id]
+
     building.save!
-    flash[:error] = 'Job Posting is added successfully.'
+    flash[:sucess] = "Building #{building.name} has been added to Database"
     redirect_to hostellers_path
   end
 
@@ -34,7 +36,7 @@ class BuildingsController < ApplicationController
 
 
   def building_params
-    params.require(:building).permit(:name, :location, :max_strength)
+    params.require(:building).permit(:name, :location, :max_strength, :user_id)
   end
 
 end

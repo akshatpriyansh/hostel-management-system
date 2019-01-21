@@ -25,7 +25,6 @@ class SessionsController < ApplicationController
     authorized_user = User.authenticate(params[:username_or_email],params[:login_password])
     if authorized_user
       session[:user_id] = authorized_user.id
-      flash[:notice] = "Welcome, #{authorized_user.user_name}"
       redirect_to home_path logged_in: true
     else
       flash[:notice] = "Invalid Username or Password"

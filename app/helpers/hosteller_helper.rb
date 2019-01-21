@@ -4,7 +4,7 @@ module HostellerHelper
     building_name
   end
 
-  def get_all_buildings
-    Building.order(:id).map {|p| [p.name, p.id]}
+  def get_all_buildings(user_id)
+    Building.where(user_id: user_id).order(:id).map {|p| [p.name, p.id]}
   end
 end

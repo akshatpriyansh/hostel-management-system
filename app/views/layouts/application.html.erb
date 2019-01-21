@@ -15,14 +15,13 @@
 </header>
 <body>
 <%= render partial: "shared/flash_messages", flash: flash %>
-<div class="container-fluid" style="margin-top:50px;">
-  <body>
-    <%= yield %>
-  </body>
+<div class="container-fluid demo" style="margin-top:50px;">
+  <input type="hidden" id="_user_id" value="<%=session[:user_id]%>">
+  <%= yield %>
 </div>
 </body>
 
-<footer>
+<footer class="footer">
   <% if session[:user_id].present? %>
     <%= render partial: "shared/footer"%>
   <% end %>
