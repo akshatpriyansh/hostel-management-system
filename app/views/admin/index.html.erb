@@ -3,7 +3,6 @@
 <% end %>
 
 
-<div class="container-fluid">
   <div class="row content">
     <div class="col-sm-3 sidenav hidden-xs">
       <h2>Logo</h2>
@@ -24,14 +23,14 @@
       <div class="row">
         <div class="col-sm-3">
           <div class="well">
-            <h4>Users</h4>
-            <p>1 Million</p>
+            <h4>Hostellers</h4>
+            <p><%= @user_index_details[:hosteller_count] %></p>
           </div>
         </div>
         <div class="col-sm-3">
           <div class="well">
-            <h4>Pages</h4>
-            <p>100 Million</p>
+            <h4>Buildings</h4>
+            <p><%= @user_index_details[:building_count] %></p>
           </div>
         </div>
         <div class="col-sm-3">
@@ -84,6 +83,5 @@
       </div>
     </div>
   </div>
-</div>
 
 <div id="snackbar">You have successfully logged in!</div>
